@@ -51,8 +51,10 @@ class LocationHandler extends React.Component {
     
   }
 
-  for (let i = 0; i < data.length; i++) {
-    const element = data[i];
+  let data1 = document.head.getElementsByTagName("style")
+
+  for (let i = 0; i < data1.length; i++) {
+    const element = data1[i];
  
     if(element.innerHTML.search(".css-92jnlk") !== -1){
       element.innerHTML = ""

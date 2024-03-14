@@ -46,6 +46,11 @@ class LocationHandler extends React.Component {
        element.innerHTML = ""
        element.innerHTML = ".css-zxi5dp-Footer{display:none}"
     }
+
+    if(  element.innerHTML.search(".css-92jnlk") !== -1 !== -1){
+      element.innerHTML = ""
+      element.innerHTML = ".css-92jnlk{display:none}"
+   }
     
   }
     const slicesContext = {

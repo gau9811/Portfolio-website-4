@@ -1,6 +1,7 @@
 import React from "react"
 
 export const ServerSliceRenderer = ({ sliceId, children }) => {
+ 
   const contents = [
     React.createElement(`slice-start`, {
       id: `${sliceId}-1`,
@@ -13,6 +14,7 @@ export const ServerSliceRenderer = ({ sliceId, children }) => {
   if (children) {
     // if children exist, we split the slice into a before and after piece
     // see renderSlices in render-html
+    console.log(children)
     contents.push(children)
     contents.push(
       React.createElement(`slice-start`, {

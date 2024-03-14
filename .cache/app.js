@@ -20,7 +20,6 @@ import { init as navigationInit } from "./navigation"
 // this is so there is no warning about not matching content-type when site doesn't include any regular css (for example when css-in-js is used)
 // this also make sure that if all css is removed in develop we are not left with stale commons.css that have stale content
 import "./blank.css"
-
 // Enable fast-refresh for virtual sync-requires, gatsby-browser & navigation
 // To ensure that our <Root /> component can hot reload in case anything below doesn't
 // satisfy fast-refresh constraints

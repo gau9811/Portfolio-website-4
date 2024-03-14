@@ -22,18 +22,7 @@
         document.documentElement.classList.add('theme-ui-' + mode);
       } catch (e) { }
 
-      let data = document.head.getElementsByTagName("style")
-console.log(data)
-for (let i = 0; i < data.length; i++) {
-  const element = data[i];
-  console.log(element)
 
-  if(element.innerHTML.search("css-zxi5dp-Footer") !== -1){
-        element.innerHTML = ""
-        element.innerHTML = ".css-zxi5dp-Footer{display:none}"
-  }
-  
-}
     })();</script>
   <div id="___gatsby"></div>
   <script src="/framework.js"></script>

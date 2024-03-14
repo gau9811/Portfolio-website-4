@@ -161,7 +161,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
 
     function App() {
       const onClientEntryRanRef = React.useRef(false)
-
+       console.log("document",document.head)
       React.useEffect(() => {
         if (!onClientEntryRanRef.current) {
           onClientEntryRanRef.current = true

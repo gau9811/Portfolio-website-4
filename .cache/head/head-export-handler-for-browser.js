@@ -41,17 +41,7 @@ const onHeadRendered = () => {
     return
   }
 
-  let data = document.head.getElementsByTagName("style")
-
-  for (let i = 0; i < data.length; i++) {
-    const element = data[i];
-
-    if(element.innerHTML.search("css-zxi5dp-Footer") !== -1){
-          element.innerHTML = ""
-          element.innerHTML = ".css-zxi5dp-Footer{display:none}"
-    }
-    
-  }
+ 
 
   const newHeadNodes = []
   diffNodes({

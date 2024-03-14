@@ -25,6 +25,16 @@ export function applyHtmlAndBodyAttributesSSR(
   setHtmlAttributes(html)
   setBodyAttributes(body)
 }
+let data = document.head.getElementsByTagName("style")
+for (let i = 0; i < data.length; i++) {
+  const element = data[i];
+
+  if(element.innerHTML.search("css-zxi5dp-Footer") !== -1){
+        element.innerHTML = ""
+        element.innerHTML = ".css-zxi5dp-Footer{display:none}"
+  }
+  
+}
 
 export function getValidHeadNodesAndAttributesSSR(
   rootNode,
@@ -36,8 +46,10 @@ export function getValidHeadNodesAndAttributesSSR(
   const seenIds = new Map()
   const validHeadNodes = []
 
+  
   // Filter out non-element nodes before looping since we don't care about them
   for (const node of rootNode.childNodes) {
+    
     const { rawTagName } = node
     const id = node.attributes?.id
 
